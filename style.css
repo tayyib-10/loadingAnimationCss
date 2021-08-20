@@ -1,0 +1,63 @@
+body {
+  background-color: black;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.outer {
+  height: 100px;
+  width: 100px;
+  border: 10px solid;
+  border-color: #00FFBC;
+  box-shadow: 20px 0px  40px 5px#00FFBC;
+  border-bottom-color: black;
+  border-left-color: black;
+  border-radius: 100px;
+  position: relative;
+  animation-name: clock;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+.inner {
+  height: 50px;
+  width: 50px;
+  border: 10px solid ;
+  border-color: #C4D700;
+  box-shadow: 0px 20px  40px 10px #C4D700;
+  border-top-color: black;
+  border-right-color: black;
+  border-radius: 50px;
+  margin: 15px;
+  position: absolute;
+  animation-name: antiClock;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  
+}
+
+@keyframes clock {
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes antiClock {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
